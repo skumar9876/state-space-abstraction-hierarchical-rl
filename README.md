@@ -10,4 +10,4 @@ To illustrate how this would work, consider the MountianCar environment describe
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*nbCSvWmyS_BUDz_WAJyKUw.gif)
 
-https://www.google.com "Google's Homepage"
+[I'm an inline-style link](https://www.google.com)
