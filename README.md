@@ -9,3 +9,5 @@ If we are able to discretize the meta-controller's state space and represent the
 To illustrate how this would work, consider the MountianCar environment described here: https://github.com/openai/gym/wiki/MountainCar-v0. In this environment, the agent controls a car, which can move left or right, and the goal is to reach the top of the hill on the right side. The state of the agent is a vector of two numbers: the agent's position and the agent's velocity.
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*nbCSvWmyS_BUDz_WAJyKUw.gif)
+
+https://www.google.com "Google's Homepage"
