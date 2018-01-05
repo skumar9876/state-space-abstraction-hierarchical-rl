@@ -19,7 +19,9 @@ Now, the meta-controller's state is a one-hot vector indicating in which cluster
 The controller's state is the environment state, which is the 1-dimensional vector of the position and velocity, concatenated with the one-hot vector representing the meta-controller's instruction. Thus, the meta-controller is a tabular Q-learning agent, while the controller is a DQN agent. We wanted to see if this setup would reduce the training time of the agent when compared to a standard DQN agent.
 
 Below is a plot summarizing the results:
+![alt_text](https://github.com/skumar9876/state-space-abstraction-hierarchical-rl/blob/master/results/plot.png)
 
+We ran 10 experiments with DQN and 10 with this hierarchical reinforcement learning setup. The plot shows the range between the 10th and 90th percentile of episodic rewards achieved over training time. The x-axis is number of training steps, while the y-axis is the reward.
 
 Other variants we tried (none of them beat the standard DQN agent):
 - Increasing the number of clusters to boost the granularity of the meta-controller state space (this also increases the action space of the meta-controller).
