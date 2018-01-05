@@ -21,7 +21,9 @@ The controller's state is the environment state, which is the 1-dimensional vect
 Below is a plot summarizing the results:
 ![alt_text](https://github.com/skumar9876/state-space-abstraction-hierarchical-rl/blob/master/results/plot.png)
 
-We ran 10 experiments with DQN and 10 with this hierarchical reinforcement learning setup. The plot shows the range between the 10th and 90th percentile of episodic rewards achieved over training time. The x-axis is number of training steps, while the y-axis is the reward. The red is standard DQN while the green is our approach. It is evident from the plot that our setup does not produce a clear benefit over the standard DQN approach.
+We ran 10 experiments with DQN and 10 with this hierarchical reinforcement learning setup. The plot shows the range between the 10th and 90th percentile of episodic rewards achieved over training time. The x-axis is number of training steps, while the y-axis is the reward. The red is standard DQN while the green is our approach. It is evident from the plot that our setup does not produce a clear benefit over the standard DQN approach. Upon analyzing the meta-controller's behavior, we found that the problems are:
+(1) The clusters are not granular enough. There is too wide of a range in position / velocity within each cluster.
+(2) Each state can only have one possible greedy action with tabular Q learning. This does not account for the fact that the agent has to move back and forth a couple times before gaining enough momentum to travel up the hill. The meta-controller first learns to move the agent back and forth but then cannot instruct the agent to reach the goal state. Eventually, the meta-controller converges on the policy of immediately telling the agent to go to the goal state, rendering the use of hierarchy ineffective, as the controller now has to solve the same problem as a standard DQN agent. 
 
 Other variants we tried (none of them beat the standard DQN agent):
 - Increasing the number of clusters to boost the granularity of the meta-controller state space (this also increases the action space of the meta-controller).
