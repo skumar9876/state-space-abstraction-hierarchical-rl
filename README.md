@@ -21,7 +21,7 @@ The controller's state is the environment state, which is the 1-dimensional vect
 Below is a plot summarizing the results:
 ![alt_text](https://github.com/skumar9876/state-space-abstraction-hierarchical-rl/blob/master/results/plot.png)
 
-We ran 10 experiments with DQN and 10 with this hierarchical reinforcement learning setup. The plot shows the range between the 10th and 90th percentile of episodic rewards achieved over training time. The x-axis is number of training steps, while the y-axis is the reward.
+We ran 10 experiments with DQN and 10 with this hierarchical reinforcement learning setup. The plot shows the range between the 10th and 90th percentile of episodic rewards achieved over training time. The x-axis is number of training steps, while the y-axis is the reward. The red is standard DQN while the green is our approach. It is evident from the plot that our setup does not produce a clear benefit over the standard DQN approach.
 
 Other variants we tried (none of them beat the standard DQN agent):
 - Increasing the number of clusters to boost the granularity of the meta-controller state space (this also increases the action space of the meta-controller).
