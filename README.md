@@ -12,3 +12,4 @@ To illustrate how this would work, consider the [MountainCar](https://github.com
 
 In order to discretize this state space, we collect 100 trajectories of the agent by spawning the agent in a random location on the hill in every episode and picking random actions until the episode terminates. These trajectories give us thousands of states which we then cluster using k-means clustering on the position and velocity. This clustering process is almost entirely unsupervised with the caveat that we cluster goal states into a separate cluster. Below is an example of the formed clusters when k=5.
 
+![alt_text](https://github.com/skumar9876/state-space-abstraction-hierarchical-rl/blob/master/clusters/Clusters.png)
