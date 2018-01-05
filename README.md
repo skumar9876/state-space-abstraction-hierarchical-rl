@@ -6,7 +6,7 @@ In this exploratory project, we tried to incorporate state space abstraction int
 
 If we are able to discretize the meta-controller's state space and represent the subgoals in that new state space, then the meta-controller can be trained using tabular Q-learning. In theory, this would significantly speed up the overall training of the reinforcement learning agent. 
 
-To illustrate how this would work, consider the [MountianCar](https://github.com/openai/gym/wiki/MountainCar-v0) environment. In this environment, the agent controls a car, which can move left or right, and the goal is to reach the top of the hill on the right side. The agent's state is a vector of two numbers: the current position and velocity.
+To illustrate how this would work, consider the [MountainCar](https://github.com/openai/gym/wiki/MountainCar-v0) environment. In this environment, the agent controls a car, which can move left or right, and the goal is to reach the top of the hill on the right side. The agent's state is a vector of two numbers: the current position and velocity.
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*nbCSvWmyS_BUDz_WAJyKUw.gif)
 
