@@ -28,3 +28,5 @@ We ran 10 experiments with DQN and 10 with this hierarchical reinforcement learn
 Other variants we tried (none of them beat the standard DQN agent):
 - Increasing the number of clusters to boost the granularity of the meta-controller state space (this also increases the action space of the meta-controller).
 - Adding a memory to the meta-controller and implementing it as a DQN with an RNN generating the q-values. This setup did allow the meta-controller to learn to move the agent back and forth before instructing it to go to the "goal cluster," but the training was very unstable.
+
+The goal of this approach was to speed up deep reinforcement learning agents' training by combining unsupervised state space clustering with the hierarchical reinforcement learning paradigm. Perhaps if we select an environment such that within each cluster, all the environment states are the "same" with respect to the optimal policy (e.g. in an environment with rooms, if the agent is in one room, its position in the room may not affect which room it should go to next to solve the task), our approach would show benefits over the baseline.
