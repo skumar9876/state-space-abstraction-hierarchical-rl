@@ -10,4 +10,5 @@ To illustrate how this would work, consider the [MountainCar](https://github.com
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*nbCSvWmyS_BUDz_WAJyKUw.gif)
 
-In order to discretize this state space, we collect 100 trajectories of the agent by spawning the agent in a random location on the hill in every episode and picking random actions until the episode terminates. These trajectories give us thousands of states which we then cluster using k-means clustering on the position and velocity. This clustering process is almost entirely unsupervised with the caveat that we cluster states which are goal states separately. Below is an example of the formed clusters.
+In order to discretize this state space, we collect 100 trajectories of the agent by spawning the agent in a random location on the hill in every episode and picking random actions until the episode terminates. These trajectories give us thousands of states which we then cluster using k-means clustering on the position and velocity. This clustering process is almost entirely unsupervised with the caveat that we cluster goal states into a separate cluster. Below is an example of the formed clusters when k=5.
+
